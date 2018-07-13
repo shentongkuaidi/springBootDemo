@@ -1,4 +1,4 @@
-server:
+﻿server:
     port: 8080
 
 #数据源
@@ -39,3 +39,4 @@ employee:
   name: 沈通
   sex: 男
   age: 24
+  area:Nanjing

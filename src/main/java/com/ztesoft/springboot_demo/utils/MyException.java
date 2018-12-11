@@ -1,4 +1,4 @@
-package com.ztesoft.demo.springboot_demo.utils;
+package com.ztesoft.springboot_demo.utils;
 
 public class MyException extends RuntimeException {
 	private String code;

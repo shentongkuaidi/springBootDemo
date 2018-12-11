@@ -12,6 +12,6 @@ public class Test implements CommandLineRunner{
 
 	@Override
 	public void run(String... s1) throws Exception{
-		System.out.println("Test 启动了。。。");
+		System.out.println("Test 成功启动了。。。");
 	}
 }

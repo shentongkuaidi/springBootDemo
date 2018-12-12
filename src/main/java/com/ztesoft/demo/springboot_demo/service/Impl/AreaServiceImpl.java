@@ -1,10 +1,10 @@
-package com.ztesoft.springboot_demo.service.Impl;
+package com.ztesoft.demo.springboot_demo.service.Impl;
 
-import com.ztesoft.springboot_demo.dao.AreaDao;
-import com.ztesoft.springboot_demo.entity.City;
-import com.ztesoft.springboot_demo.entity.Provice;
-import com.ztesoft.springboot_demo.entity.Region;
-import com.ztesoft.springboot_demo.service.AreaService;
+import com.ztesoft.demo.springboot_demo.dao.AreaDao;
+import com.ztesoft.demo.springboot_demo.entity.City;
+import com.ztesoft.demo.springboot_demo.entity.Provice;
+import com.ztesoft.demo.springboot_demo.entity.Region;
+import com.ztesoft.demo.springboot_demo.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,7 +25,7 @@ public class AreaServiceImpl implements AreaService {
 	}
 
 	@Override
-	public List<com.ztesoft.springboot_demo.dto.Provice> queryArea(){
+	public List<com.ztesoft.demo.springboot_demo.dto.Provice> queryArea(){
 		return areaDao.queryArea();
 	}
 }

@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ztesoft.springboot_demo.dao.EmployeeDao">
+<mapper namespace="com.ztesoft.demo.springboot_demo.dao.EmployeeDao">
     <sql id="BaseTableInfo">
         id,name,sex,age,job
     </sql>
-    <select id="selectAll" resultType="com.ztesoft.springboot_demo.entity.Employee">
+    <select id="selectAll" resultType="com.ztesoft.demo.springboot_demo.entity.Employee">
         SELECT
         <include refid="BaseTableInfo"/>
         FROM employee
+    </select>
+
+    <select id="selectById" resultType="com.ztesoft.demo.springboot_demo.entity.Employee">
+        SELECT
+        <include refid="BaseTableInfo"/>
+        FROM employee
+        where id = #{id}
     </select>
 </mapper>

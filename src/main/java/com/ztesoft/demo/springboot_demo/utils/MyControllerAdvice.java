@@ -16,6 +16,7 @@ public class MyControllerAdvice {
 	 * @return
 	 */
 	@ResponseBody
+	@SuppressWarnings("unchecked")
 	@ExceptionHandler(value = Exception.class)
 	public Map errorHandler(Exception ex) {
 		Map map = new HashMap();
@@ -32,6 +33,7 @@ public class MyControllerAdvice {
 	 * @return
 	 */
 	@ResponseBody
+	@SuppressWarnings("unchecked")
 	@ExceptionHandler(value = MyException.class)
 	public Map myErrorHandler(MyException ex) {
 		Map map = new HashMap();

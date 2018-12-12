@@ -1,8 +1,8 @@
-package com.ztesoft.springboot_demo.dto;
+package com.ztesoft.demo.springboot_demo.dto;
 
-import com.ztesoft.springboot_demo.entity.City;
-import com.ztesoft.springboot_demo.entity.Provice;
-import com.ztesoft.springboot_demo.entity.Region;
+import com.ztesoft.demo.springboot_demo.entity.City;
+import com.ztesoft.demo.springboot_demo.entity.Region;
+import com.ztesoft.demo.springboot_demo.entity.Provice;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class Area {
 		this.pList = pList;
 	}
 
-	public List<City> getcList() {
+	public List<com.ztesoft.demo.springboot_demo.entity.City> getcList() {
 		return cList;
 	}
 
@@ -27,7 +27,7 @@ public class Area {
 		this.cList = cList;
 	}
 
-	public List<Region> getrList() {
+	public List<com.ztesoft.demo.springboot_demo.entity.Region> getrList() {
 		return rList;
 	}
 

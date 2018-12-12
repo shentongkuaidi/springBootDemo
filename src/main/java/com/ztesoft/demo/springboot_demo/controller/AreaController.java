@@ -1,8 +1,8 @@
-package com.ztesoft.springboot_demo.controller;
+package com.ztesoft.demo.springboot_demo.controller;
 
-import com.ztesoft.springboot_demo.dto.Area;
-import com.ztesoft.springboot_demo.dto.Provice;
-import com.ztesoft.springboot_demo.service.AreaService;
+import com.ztesoft.demo.springboot_demo.dto.Area;
+import com.ztesoft.demo.springboot_demo.dto.Provice;
+import com.ztesoft.demo.springboot_demo.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

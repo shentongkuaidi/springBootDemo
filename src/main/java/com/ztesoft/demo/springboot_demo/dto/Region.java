@@ -1,4 +1,4 @@
-package com.ztesoft.springboot_demo.dto;
+package com.ztesoft.demo.springboot_demo.dto;
 
 public class Region {
 	private int id;

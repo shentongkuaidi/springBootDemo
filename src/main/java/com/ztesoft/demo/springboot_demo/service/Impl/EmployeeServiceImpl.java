@@ -1,12 +1,11 @@
-package com.ztesoft.springboot_demo.service.Impl;
+package com.ztesoft.demo.springboot_demo.service.Impl;
 
-import com.ztesoft.springboot_demo.dao.EmployeeDao;
-import com.ztesoft.springboot_demo.dao.JdbcDao;
-import com.ztesoft.springboot_demo.entity.Employee;
-import com.ztesoft.springboot_demo.service.EmployeeService;
+import com.ztesoft.demo.springboot_demo.dao.JdbcDao;
+import com.ztesoft.demo.springboot_demo.entity.Employee;
+import com.ztesoft.demo.springboot_demo.service.EmployeeService;
+import com.ztesoft.demo.springboot_demo.dao.EmployeeDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,6 +21,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public List<Employee> selectAll(){
 		return employeeDao.selectAll();
+	}
+
+	@Override
+	public Employee selectById(String employeeId){
+		return employeeDao.selectById(employeeId);
 	}
 
 	public Employee queryOne(String id){

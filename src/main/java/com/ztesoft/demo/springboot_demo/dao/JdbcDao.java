@@ -1,6 +1,6 @@
-package com.ztesoft.springboot_demo.dao;
+package com.ztesoft.demo.springboot_demo.dao;
 
-import com.ztesoft.springboot_demo.entity.Employee;
+import com.ztesoft.demo.springboot_demo.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

@@ -36,8 +36,8 @@ logging:
 
 #配置文件测试
 employee:
-  name: 沈通
-  sex: 男
-  age: 24
-  area:Nanjing
-  test:new dev
+    name: 沈通
+    sex: 男
+    age: 24
+    area: Nanjing
+    test: new dev

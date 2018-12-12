@@ -39,6 +39,22 @@ $(function () {
                 $("#gridId").grid("reloadData", data.employeeList);
             }
         })
+    });
+
+    $('#loadEmployee').click(function () {
+        $.ajax({
+            type: 'post',
+            url: '/list',
+            data: {"id":"6027023339"},
+            dataType: 'json',
+            async: false,
+            success: function (data) {
+                $.each(data.employeeList, function (index, el) {
+                    console.log("员工号：" + el.id + "|| 姓名：" + el.name + "|| 年龄：" + el.age);
+                });
+                $("#gridId").grid("reloadData", data.employeeList);
+            }
+        })
     })
 });
 

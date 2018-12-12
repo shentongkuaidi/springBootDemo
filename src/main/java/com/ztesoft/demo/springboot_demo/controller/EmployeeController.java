@@ -1,8 +1,8 @@
-package com.ztesoft.springboot_demo.controller;
+package com.ztesoft.demo.springboot_demo.controller;
 
-import com.ztesoft.springboot_demo.dao.JdbcDao;
-import com.ztesoft.springboot_demo.entity.Employee;
-import com.ztesoft.springboot_demo.service.EmployeeService;
+import com.ztesoft.demo.springboot_demo.entity.Employee;
+import com.ztesoft.demo.springboot_demo.service.EmployeeService;
+import com.ztesoft.demo.springboot_demo.dao.JdbcDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
@@ -15,10 +15,10 @@ import java.util.Map;
 @PropertySource("classpath:config/test.yml")
 public class EmployeeController {
 	@Autowired
-	private EmployeeService employeeService;
+	EmployeeService employeeService;
 
 	@Autowired
-	private JdbcDao jdbcDao;
+	JdbcDao jdbcDao;
 
 //	配置文件
 	@Value("${employee.name}")
@@ -44,10 +44,18 @@ public class EmployeeController {
 	}
 
 	//员工列表
-	@RequestMapping(value = "/list")
+	@PostMapping(value = "/list")
 	public Map<String,Object> selectAll(){
 		Map<String,Object> resultMap = new HashMap<>();
 		resultMap.put("employeeList",employeeService.selectAll());
+		return resultMap;
+	}
+
+	//个人信息
+	@PostMapping(value = "/selectById")
+	public Map<String,Object> selectById(String id){
+		Map<String,Object> resultMap = new HashMap<>();
+		resultMap.put("employee",employeeService.selectById(id));
 		return resultMap;
 	}
 

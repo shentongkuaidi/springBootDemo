@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.ztesoft.springboot_demo.dao.AreaDao">
+<mapper namespace="com.ztesoft.demo.springboot_demo.dao.AreaDao">
     <insert id="addProvice" parameterType="java.util.List">
         INSERT INTO provice(proid,proname)
         VALUES
@@ -36,19 +36,19 @@
         </foreach>
     </insert>
     
-    <resultMap id="provice" type="com.ztesoft.springboot_demo.dto.Provice">
+    <resultMap id="provice" type="com.ztesoft.demo.springboot_demo.dto.Provice">
         <result property="id" column="PROID"/>
         <result property="name" column="PRONAME"/>
         <association property="children" column="PROID" select="getCity"/>
     </resultMap>
 
-    <resultMap id="city" type="com.ztesoft.springboot_demo.dto.City">
+    <resultMap id="city" type="com.ztesoft.demo.springboot_demo.dto.City">
         <result property="id" column="CITID"/>
         <result property="name" column="CITNAME"/>
         <association property="children" column="CITID" select="getRegion"/>
     </resultMap>
 
-    <select id="getRegion" resultType="com.ztesoft.springboot_demo.dto.Region">
+    <select id="getRegion" resultType="com.ztesoft.demo.springboot_demo.dto.Region">
         select regid as id,regname as name from region where citid=#{CITID}
     </select>
 

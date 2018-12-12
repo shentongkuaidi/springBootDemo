@@ -1,4 +1,4 @@
-package com.ztesoft.springboot_demo.entity;
+package com.ztesoft.demo.springboot_demo.entity;
 
 public class Region {
 	private int regid;

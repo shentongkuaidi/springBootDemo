@@ -20,10 +20,6 @@ public class AreaController {
 	@PostMapping("/addArea")
 	public Map<String, Object> addArea(@RequestBody Area area) {
 		System.out.println("数据已加载！");
-//		测试获取数据结果
-//		System.out.println(area.getpList().get(2).getProname());
-//		System.out.println(area.getcList().get(32).getCitname());
-//		System.out.println(area.getrList().get(0).getRegname());
 		Map<String, Object> resultMap = new HashMap<>();
 		if (areaService.addArea(area.getpList(), area.getcList(), area.getrList())) resultMap.put("result", "1");
 		else resultMap.put("result", "0");

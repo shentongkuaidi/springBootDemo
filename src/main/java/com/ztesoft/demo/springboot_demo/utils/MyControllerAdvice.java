@@ -1,4 +1,4 @@
-package com.ztesoft.demo.springboot_demo.utils;
+package com.ztesoft.springboot_demo.utils;
 
 import org.springframework.web.bind.annotation.*;
 

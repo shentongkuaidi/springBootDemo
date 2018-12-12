@@ -1,7 +1,5 @@
 package com.ztesoft.demo.springboot_demo.entity;
 
-import java.security.PrivateKey;
-
 public class Employee {
 	private String id;
 	private String name;

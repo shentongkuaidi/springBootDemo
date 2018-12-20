@@ -19,7 +19,7 @@ spring:
          maxPoolPreparedStatementPerConnectionSize: 20
 
          #JPA配置
-         driverClassName : com.mysql.jdbc.Driver
-         database : MYSQL
+         driverClassName: com.mysql.jdbc.Driver
+         database: MYSQL
          # Show or not log for each sql query
-         spring.jpa.show-sql : true
+         spring.jpa.show-sql: true
